@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O Casamento de Kaique & Isabelly</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container">
+            <a href="#home" class="nav-brand">K & I</a>
+            <ul>
+                <li><a href="#story">Nossa História</a></li>
+                <li><a href="#gallery">Galeria</a></li>
+                <li><a href="#gift-list">Presentes</a></li>
+                <li><a href="#rsvp" class="nav-button">Confirmar Presença</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header id="home">
+        <div class="hero-content">
+            <h1>Kaique & Isabelly</h1>
+            <p>Unindo vidas em 25 de Outubro de 2026</p>
+            <div id="countdown" class="countdown"></div>
+        </div>
+    </header>
+
+    <main>
+        <section id="story" class="container reveal">
+            <h2 class="section-title">Nossa História</h2>
+            <p class="section-subtitle">Dois caminhos, um destino. Uma história que começou com um simples "oi" e nos trouxe ao nosso "para sempre". Convidamos você a celebrar o capítulo mais importante de nossas vidas.</p>
+        </section>
+        
+        <section id="gallery" class="light-bg reveal">
+            <div class="container">
+                <h2 class="section-title">Momentos</h2>
+                <div class="gallery-grid">
+                    <img src="https://i.imgur.com/vHAEiT0.jpg" alt="Foto do casal 1" onclick="openModal(this.src)">
+                    <img src="https://i.imgur.com/xO4Wa0c.jpg" alt="Foto do casal 2" onclick="openModal(this.src)">
+                    <img src="https://i.imgur.com/N6dpl0n.jpg" alt="Foto do casal 3" onclick="openModal(this.src)">
+                    <img src="https://i.imgur.com/Y1rNCD1.jpg" alt="Foto do casal 4" onclick="openModal(this.src)">
+                    <img src="https://i.imgur.com/VvBcfbS.jpg" alt="Foto do casal 5" onclick="openModal(this.src)">
+                    <img src="https://i.imgur.com/xI6wz8K.jpg" alt="Foto do casal 6" onclick="openModal(this.src)">
+                </div>
+            </div>
+        </section>
+
+        <section id="event-details" class="container reveal">
+            <h2 class="section-title">A Celebração</h2>
+            <div class="details-grid">
+                <div class="detail-item">
+                    <h3>Cerimônia & Recepção</h3>
+                    <p>Sábado, 25 de Outubro de 2026, às 16:00</p>
+                    <p><strong>Salão de Festas Elegance</strong></p>
+                    <p>Rua da Celebração, 456, São Paulo</p>
+                </div>
+                <div class="detail-item">
+                    <h3>Traje</h3>
+                    <p>Esporte Fino</p>
+                    <p>Sua presença elegante e confortável é o que importa para nós.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="gift-list" class="light-bg reveal">
+            <div class="container">
+                <h2 class="section-title">Lista de Presentes</h2>
+                <p class="section-subtitle">Sua presença é o maior presente. Mas se desejar nos presentear, criamos uma forma divertida de participar dos nossos sonhos.</p>
+                <div class="gift-grid">
+                    <div class="gift-item">
+                        <img src="https://i.imgur.com/eG1EAqA.jpg" alt="Praia paradisíaca">
+                        <h3>Nossa Lua de Mel</h3>
+                        <p class="price">Contribua com qualquer valor para nossa viagem dos sonhos.</p>
+                        <a href="comprar.html?title=Nossa+Lua+de+Mel&price=300&img=https://i.imgur.com/eG1EAqA.jpg" class="button">Contribuir</a>
+                    </div>
+                    <div class="gift-item">
+                        <img src="https://i.imgur.com/2bA6T4s.jpg" alt="Restaurante chique">
+                        <h3>Jantar Romântico</h3>
+                        <p class="price">Nos presenteie com uma experiência gastronômica inesquecível.</p>
+                        <a href="comprar.html?title=Jantar+Romântico&price=350&img=https://i.imgur.com/2bA6T4s.jpg" class="button">Oferecer Jantar</a>
+                    </div>
+                    <div class="gift-item">
+                        <img src="https://i.imgur.com/uR1i3GT.jpg" alt="Casal dançando">
+                        <h3>Aulas de Dança</h3>
+                        <p class="price">Para aprimorar (ou criar) o talento do noivo para a primeira dança.</p>
+                        <a href="comprar.html?title=Aulas+de+Dança+para+o+Noivo&price=150&img=https://i.imgur.com/uR1i3GT.jpg" class="button">Apoiar o Ritmo</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="rsvp" class="container reveal">
+            <h2 class="section-title">Confirme sua Presença</h2>
+             <form id="rsvp-form" action="https://formspree.io/f/xyznlkya" method="POST">
+                <input type="text" name="Nome" placeholder="Seu nome completo" required>
+                <input type="email" name="Email" placeholder="Seu e-mail" required>
+                <input type="text" name="Música" placeholder="Qual música não pode faltar na festa?">
+                <button type="submit">Enviar Confirmação</button>
+            </form>
+            <div id="rsvp-status" class="form-status"></div>
+        </section>
+    </main>
+
+    <footer><p>Kaique & Isabelly</p></footer>
+
+    <div id="gallery-modal" class="modal">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="modal-image">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

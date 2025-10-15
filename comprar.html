@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presentear Kaique & Isabelly</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body class="purchase-body">
+    <main class="purchase-container-wrapper">
+        <div id="form-wrapper">
+            <div class="purchase-header">
+                <a href="index.html" class="back-link-main">← Voltar</a>
+                <h1 id="gift-title">Carregando...</h1>
+            </div>
+            <div class="purchase-content">
+                <form id="purchase-form" action="https://formspree.io/f/xyznlkya" method="POST">
+                    <input type="hidden" id="hidden-gift-title" name="Presente Escolhido">
+                    <div>
+                        <label for="guest-name">Seu Nome</label>
+                        <input type="text" id="guest-name" name="Nome do Convidado" required>
+                    </div>
+                    <div>
+                        <label for="gift-amount">Valor da Contribuição (R$)</label>
+                        <input type="number" id="gift-amount" name="Valor do Presente" step="0.01" min="1.00" required>
+                    </div>
+                    <div class="pix-details">
+                        <p><strong>Para finalizar, faça um PIX para a chave abaixo e clique no botão para nos avisar.</strong></p>
+                        <p class="pix-key">f1a2b3c4-d5e6-f7g8-h9i0-j1k2l3m4n5o6</p>
+                    </div>
+                    <button type="submit">Avisar os Noivos</button>
+                </form>
+            </div>
+        </div>
+        <div id="success-message" class="hidden">
+            <div class="success-content">
+                <span class="success-icon">✓</span>
+                <h2>Obrigado, <span id="guest-name-success"></span>!</h2>
+                <p>Seu carinho ilumina nosso caminho! Recebemos seu aviso. Se desejar, pode nos enviar o comprovante por WhatsApp.</p>
+                <a href="https://wa.me/5511999998888" target="_blank" class="whatsapp-button">Enviar Comprovante</a>
+                <a href="index.html" class="back-link-success">Voltar ao site</a>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
